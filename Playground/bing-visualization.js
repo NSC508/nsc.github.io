@@ -7,6 +7,7 @@ var margin = {top: 20, right: 20, bottom: 20, left: 20},
 var radius = 10;
 
 // create an array of objects that represent each category and its percentage
+const numCircles = 100;
 var data = [
   {name: "A", value: 0.2},
   {name: "B", value: 0.3},
@@ -37,14 +38,35 @@ var svg = d3.select("body").append("svg")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
 
-// append circles for each data point and position them according to the scales
-var circles = svg.selectAll("circle")
-    .data(data)
-  	.enter().append("circle")
-    	.attr("cx", (d,i) => x(i))
-    	.attr("cy", height)
-    	.attr("r", radius)
-    	.attr("fill", d => color(d.name));
+// //create 100 circles and have each of them colored according to the category
+// var circles = svg.selectAll("circle")
+//     .data(data)
+//     .enter().append("circle")
+//     .attr("cx", (d,i) => x(i))
+//     .attr("cy", height)
+//     .attr("r", radius)
+//     .attr("fill", d => color(d.name));
+
+
+
+// // append circles for each data point and position them according to the scales
+// var circles = svg.selectAll("circle")
+//     .data(data)
+//   	.enter().append("circle")
+//     	.attr("cx", (d,i) => x(i))
+//     	.attr("cy", height)
+//     	.attr("r", radius)
+//     	.attr("fill", d => color(d.name));
+
+// Create the circles
+const circles = svg.selectAll("circle")
+  .data(d3.range(numCircles))
+  .enter()
+  .append("circle")
+  .attr("cx", (d, i) => (i % 10) * 60 + 50)
+  .attr("cy", (d, i) => Math.floor(i / 10) * 60 + 50)
+  .attr("r", 20)
+  .style("fill", "#ccc");
 
 // add a scroll event listener to make the circles fall down individually as you scroll down
 window.addEventListener('scroll', function() {
