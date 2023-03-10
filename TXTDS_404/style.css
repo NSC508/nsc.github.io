@@ -1,0 +1,9 @@
+/* Style the tooltip div */
+.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 5px;
+    background: white;
+    border: 1px solid black;
+    pointer-events: none; /* Prevent the tooltip from blocking mouse events */
+}
