@@ -1,12 +1,13 @@
 {
   "image": "python",
-  "postStartCommand": "apt update && apt install build-essential python3-dev libcairo2-dev libpango1.0-dev ffmpeg texlive texlive-latex-extra && pip3 install manim ipython ipykernel",
+  "postStartCommand": "apt update && apt install build-essential python3-dev libcairo2-dev libpango1.0-dev ffmpeg texlive texlive-latex-extra && pip3 install manim ipython ipykernel pandas numpy",
   "customizations": {
     "vscode": {
       "extensions": ["ms-python.python", 
                     "ms-toolsai.jupyter", 
                     "github.copilot", 
-                    "james-yu.latex-workshop"
+                    "james-yu.latex-workshop",
+                    "ritwickdey.LiveServer"
                   ]
     }
   }

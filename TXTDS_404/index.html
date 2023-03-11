@@ -1,10 +1,72 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <script src="https://d3js.org/d3.v6.min.js"></script>
-    <style src="style.css"></style>
-</head>
+  <head>
+    <style>
+      body {
+        background-color: black;
+      }
+
+      p {
+        text-align: center;
+      }
+
+      .fade-in-text {
+        animation: fadeIn 3s;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      img {
+        width: 50%;
+        height: 50%;
+        object-fit: contain;
+      }
+
+      @media (max-width: 600px) {
+        img {
+          width: 50%;
+        }
+      }
+    </style>
+  </head>
+
 <body>
-    <div id="chart"></div>
-    <script src = "scipt.js"></script>
+  <div class="fade-in-text">
+    <p style="text-align:center;">What Caste Do Indians Belong To?</p>
+  </div>
+  <script>
+    function reloadImage() {
+      var iframe = document.getElementById("iframe");
+      iframe.contentWindow.location.reload(true);
+    }
+    </script>
+    
+    <iframe id="iframe" src="caste_count.gif" style="display:none;"></iframe>
+    <div style="text-align: center;">
+      <img src="caste_count.gif" alt="Image">
+    </div>
+</body>
+
+<body>
+  <div class="fade-in-text">
+    <p style="text-align:center;">Do You Think Scheduled Castes Are Discriminated Against?</p>
+  </div>
+  <script>
+    function reloadImage() {
+      var iframe = document.getElementById("iframe");
+      iframe.contentWindow.location.reload(true);
+    }
+    </script>
+    
+    <iframe id="iframe" src="caste_count.gif" style="display:none;"></iframe>
+    <div style="text-align: center;">
+      <img src="discrimination_caste.gif" alt="Image">
+    </div>
 </body>
 </html>
