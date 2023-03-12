@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
     <style>
       body {
         background-color: black;
@@ -12,6 +18,8 @@
       p {
         text-align: center;
         color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: larger;
       }
 
       .fade-in-text {
@@ -45,6 +53,19 @@
       }
 
     </style>
+
+    <script>
+      function isInViewport(element) {
+        var rect = element.getBoundingClientRect();
+        var html = document.documentElement;
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || html.clientHeight) &&
+          rect.right <= (window.innerWidth || html.clientWidth)
+        );
+      }
+    </script>
   </head>
   <style>
     .container {
@@ -62,6 +83,17 @@
   </div>
 <body>
   <div class="fade-in-text">
+    <p style="text-align:left;">
+      The caste system in India is deeply rooted in society. Many believe that castes
+      arose at the time of the Vedic period, but the caste system was not fully formed
+      until the 18th century. The caste system is a social hierarchy that divides
+      people into four main groups: Brahmins, Kshatriyas, Vaishyas, and Shudras. The
+      caste system is based on the Hindu religion, and it is believed that the caste
+      system was created by the Hindu gods. The caste system is still prevalent in
+      India today, and it is a major factor in the country's politics. 
+    </p>
+  </div>
+  <div class="fade-in-text">
     <p style="text-align:center;">What Caste Do Indians Belong To?</p>
   </div>
   <script>
@@ -71,7 +103,7 @@
     }
     </script>
     <div style="text-align: center;">
-      <img src="caste_count.gif" alt="Image">
+      <img id= "myImage" src="caste_count.gif" alt="Image">
     </div>
 
     <div class="fade-in-text">
